@@ -17,7 +17,7 @@ export default class Header extends React.Component{
     componentWillMount(){
         //显示用户名
         this.setState({
-            userName:'呆萌琪少'
+            userName:'二货琪少'
         })
         //显示初始时间
         setInterval(()=>{
@@ -32,7 +32,7 @@ export default class Header extends React.Component{
 
     }
     getWeatherAPIDate(){
-        let city = '北京';
+        let city = '武汉';
         axios.jsonp({
             url:'http://api.map.baidu.com/telematics/v3/weather?location='+encodeURIComponent(city)+'&output=json&ak=3p49MVra6urFRGOT9s8UBWr2'   //AK值可以在百度上自己申请
         }).then((res)=>{
@@ -51,7 +51,7 @@ export default class Header extends React.Component{
             <div  className="header">
                 <Row className ="header-top">
                     <Col span = "24">
-                        <span>欢迎，{this.state.userName}</span>
+                        <span>欢迎，{this.state.userName} </span>
                         <a href="#">退出</a>
                     </Col>
                 </Row>

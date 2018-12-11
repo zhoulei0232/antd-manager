@@ -64,21 +64,21 @@ export default class Tab extends React.Component {
     render(){
         return (
             <div>
-                <Card title="Tab页签" >
+                <Card title="Tab页签"  className="card-botton-wrap">
                     <Tabs defaultActiveKey="1" onChange={this.handleCallback.bind(this)}>
                         <TabPane tab="Tab 1" key="1">欢迎来到React世界1</TabPane>
                         <TabPane tab="Tab 2" key="2">欢迎来到React世界2</TabPane>
                         <TabPane tab="Tab 3" key="3">欢迎来到React世界3</TabPane>
                     </Tabs>
                 </Card>
-                <Card title="Tab带icon的页签" >
+                <Card title="Tab带icon的页签" className="card-botton-wrap" >
                     <Tabs defaultActiveKey="1" onChange={this.handleCallback.bind(this)}>
                         <TabPane tab={<span><Icon type="plus" />Tab 1</span>} key="1">欢迎来到React世界1</TabPane>
                         <TabPane tab={<span><Icon type="edit" />Tab 2</span>} key="2">欢迎来到React世界2</TabPane>
                         <TabPane tab={<span><Icon type="delete" />Tab 3</span>} key="3">欢迎来到React世界3</TabPane>
                     </Tabs>
                 </Card>
-                <Card title="Tab带icon遍历的页签" >
+                <Card title="Tab带icon遍历的页签" className="card-botton-wrap">
                     <Tabs 
                         onChange = {this.onchange.bind(this)}
                         activeKey = {this.state.activeKey}
@@ -87,7 +87,7 @@ export default class Tab extends React.Component {
                     >
                        {
                            this.state.panes.map((item)=>{
-                               return <TabPane tab={item.title} key={item.key} />
+                               return <TabPane tab={item.title} key={item.key} >{item.content}</TabPane>
                            })
                        }
                     </Tabs>

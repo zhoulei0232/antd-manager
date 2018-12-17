@@ -1,5 +1,5 @@
 import React from 'react' 
-import {Card ,Button ,Tabs ,message ,Icon} from 'antd'
+import {Card ,Tabs ,message ,Icon} from 'antd'
 import './index.less'
 const TabPane = Tabs.TabPane ;
 

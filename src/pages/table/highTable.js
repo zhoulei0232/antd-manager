@@ -377,25 +377,30 @@ export default class HighTable extends React.Component{
         const columns4 = [
             {
                 title: 'id',
+                key: 'id',
                 dataIndex: 'id'
             },
             {
                 title: '用户名',
+                key: 'userName',
                 dataIndex: 'userName'
             },
             {
                 title: '性别',
                 dataIndex: 'sex',
+                key: 'sex',
                 render(sex) {
                     return sex == 1 ? '男' : '女'
                 }
             },
             {
                 title: '年龄',
+                key: 'age',
                 dataIndex: 'age'
             },
             {
                 title: '状态',
+                key: 'state',
                 dataIndex: 'state',
                 render(state) {
                     let config = {
@@ -410,6 +415,7 @@ export default class HighTable extends React.Component{
             },
             {
                 title: '爱好',
+                key: 'interest',
                 dataIndex: 'interest',
                 render(abc) {
                     let config = {
@@ -424,10 +430,12 @@ export default class HighTable extends React.Component{
             },
             {
                 title: '生日',
+                key: 'birthday',
                 dataIndex: 'birthday'
             },
             {
                 title: '地址',
+                key: 'address',
                 dataIndex: 'address'
             },
             {
